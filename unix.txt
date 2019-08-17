@@ -1,0 +1,114 @@
+Drill 1
+QUESTION 1:-Create the following directory structure
+mkdir hello
+cd hello
+mkdir one
+mkdir five
+cd one
+touch a.txt
+touch b.txt
+mkdir two
+cd two
+touch d.txt
+mkdir three
+cd three
+touch e.txt
+mkdir four
+cd four
+touch acess.log
+cd
+cd hello
+cd five
+mkdir six
+cd six
+touch c.txt
+mkdir seven
+cd seven
+touch error.log
+
+
+QUESTION 2:-Delete all the files with the .log extension
+cd hello
+find -name "*.log" -delete
+
+
+QUESTION 3:-Add the following content to a.txt
+ echo "Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others.">> a.txt
+
+
+QESTION 4 :-Delete the directory named five
+cd hello
+rm -r five
+
+
+DRILL 2
+
+QUESTION 1:-Download the contents of "Harry Potter and the Goblet of fire" using the command line
+wget https://raw.githubusercontent.com/bobdeng/owlreader/master/ERead/assets/books/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.txt
+
+
+QUESTION 2:-Print the first three lines in the book
+head -3 "Harry Potter and the Goblet of Fire.txt"
+
+
+QUESTION 3:-Print the last 10 lines in the book
+tail -10 "Harry Potter and the Goblet of Fire.txt"
+
+QUESTION 4:-How many times do the following words occur in the book?
+Harry          grep -o -i 'Harry' "Harry Potter and the Goblet of Fire.txt" | wc -l
+
+Ron            grep -o -i 'Ron'  "Harry Potter and the Goblet of Fire.txt" | wc -l
+
+Hermione       grep -o -i 'Hermione'  "Harry Potter and the Goblet of Fire.txt" | wc -l
+
+Dumbledore     grep -o -i 'Dumbledore'  "Harry Potter and the Goblet of Fire.txt" | wc -l
+
+
+QUESTION 5:- Print lines from 100 through 200 in the book
+sed -n '100,200p' "Harry Potter and the Goblet of Fire.txt"
+
+
+QUESTION 6:-How many unique words are present in the book?
+tr ' ' '\n' < "Harry Potter and the Goblet of Fire.txt" | sort | uniq -c | wc -l
+
+
+QUESTION 7:-List your browser's process ids (pid) and parent process ids(ppid)
+ps -fC firefox
+
+
+QUESTION 8:-Stop the browser application from the command line
+kill -9 1929 //1929-(pid of process)
+
+
+QUESTION 9:-List the top 3 processes by CPU usage.
+ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -4
+
+
+QUESTION 10:- Install git vim nginx
+sudo apt-get install git
+sudo apt-get install vim
+sudo apt-get install nginx
+sudo apt-get remove nginx
+
+
+QUESTION 11:-
+local ip adress :- curl ifconfig.me
+ip adress of google:- nslookup 'google.com'
+locate python command :- locate python // gets all instances of python as well as python 2.7,python 3.6
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
